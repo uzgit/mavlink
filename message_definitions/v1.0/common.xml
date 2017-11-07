@@ -3704,6 +3704,30 @@
             <field name="wp_num" type="uint8_t">current waypoint number</field>
             <field name="wp_distance" type="uint16_t">distance to target (meters)</field>
         </message>
+	<message id="237" name="WATER_DEPTH">
+	  <description>Vibration levels and accelerometer clipping</description>
+	  <field type="uint64_t" name="time_usec">Timestamp (micros since boot or Unix epoch)</field>
+	  <field type="float" name="water_depth">depth under the transducer * 100 (in feet?)</field>
+	  <field type="float" name="latitude">Latitude, expressed as degrees</field>
+	  <field type="float" name="longitude">Longitude, expressed as degrees</field>
+	  <field type="float" name="altitude_amsl">Altitude above mean sea level (meters)</field>
+	</message>
+	<message id="238" name="WATER_TEMPERATURE">
+	  <description>Vibration levels and accelerometer clipping</description>
+	  <field type="uint64_t" name="time_usec">Timestamp (micros since boot or Unix epoch)</field>
+	  <field type="float" name="water_temperature">depth under the transducer * 100 (in feet?)</field>
+	  <field type="float" name="latitude">Latitude, expressed as degrees</field>
+	  <field type="float" name="longitude">Longitude, expressed as degrees</field>
+	  <field type="float" name="altitude_amsl">Altitude above mean sea level (meters)</field>
+	</message>
+	<message id="239" name="WATT_KNOT">
+	  <description>Values for Watts-per-knot power analysis</description>
+	  <field type="uint64_t" name="time_usec">Timestamp (micros since boot or Unix epoch)</field>
+	  <field type="float" name="voltage">Volts</field>
+	  <field type="float" name="current">Amperes</field>
+	  <field type="float" name="speed">meters per second</field>
+	  <field type="float" name="course">degrees</field>
+	</message>
         <message id="241" name="VIBRATION">
             <description>Vibration levels and accelerometer clipping</description>
             <field type="uint64_t" name="time_usec">Timestamp (micros since boot or Unix epoch)</field>
